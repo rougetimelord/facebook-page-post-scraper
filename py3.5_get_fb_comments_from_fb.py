@@ -31,7 +31,7 @@ def request_until_succeed(url):
     return response.read().decode('utf-8')
 
 # Needed to write tricky unicode correctly to csv
-def unicode_normalize(tex
+def unicode_normalize(text):
     return unicodedata.normalize('NFKD',text).encode('ASCII', 'ignore').decode('ASCII')
 
 def getFacebookCommentFeedData(status_id, access_token, num_comments):
